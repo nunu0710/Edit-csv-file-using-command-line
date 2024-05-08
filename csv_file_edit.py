@@ -12,7 +12,7 @@ changes = sys.argv[3:]
 
 #print(old_file, new_file, changes)
 
-with open("old.csv", "r") as csv_file:
+with open(old_file, "r") as csv_file:
     csv_reader = csv.reader(csv_file)
     #for line in csv_reader:
      #   print(line)
@@ -24,12 +24,12 @@ with open("old.csv", "r") as csv_file:
     old_data[2][1] = 17
     old_data[3][3] = 0
     print(old_data)
-with open("new.csv", "w", newline="") as new_csv_file:
+with open(new_file, "w", newline="") as new_csv_file:
     csv_writer = csv.writer( new_csv_file)
 
     for line in old_data:
         csv_writer.writerow(line)
-
+        
 
 
    
